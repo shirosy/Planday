@@ -42,6 +42,8 @@
 ![SwanLab 报告](images/swandlab.png)
 *(使用 SwanLab 监控的训练过程示例)*
 
+![image.png](images/image.png)
+
 ## 如何运行
 
 1.  **安装依赖**:
