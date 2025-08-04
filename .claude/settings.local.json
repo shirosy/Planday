@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(grep:*)",
+      "Bash(python3:*)",
+      "Bash(source:*)",
+      "Bash(python:*)",
+      "Bash(rm:*)",
+      "Bash(npm start)",
+      "Bash(ls:*)",
+      "Bash(curl:*)",
+      "Bash(cat:*)",
+      "Bash(touch:*)",
+      "Bash(PYTHONPATH=/Users/suyi/code/planday/src python3 -m planday.interactive)",
+      "Bash(PYTHONPATH=/Users/suyi/code/planday/src python3 -c \"\nimport asyncio\nfrom planday.main import PlanDayAgent\n\nasync def test_queries():\n    agent = PlanDayAgent()\n    session_id = ''test_session''\n    \n    print(''=== 测试1: 查询明天的安排 ==='')\n    result1 = await agent.chat(''我明天有什么安排'', session_id)\n    print(f''Response: {result1[\"\"response\"\"]}'')\n    print()\n    \n    print(''=== 测试2: 查询今天的安排 ==='')\n    result2 = await agent.chat(''我今天有什么安排'', session_id)\n    print(f''Response: {result2[\"\"response\"\"]}'')\n    print()\n\nasyncio.run(test_queries())\n\")",
+      "Bash(PYTHONPATH=/Users/suyi/code/planday/src python3 -c \"\nimport asyncio\nfrom planday.main import PlanDayAgent\n\nasync def test_comprehensive():\n    agent = PlanDayAgent()\n    session_id = ''comprehensive_test''\n    \n    tests = [\n        (''我9月25日的安排是什么'', ''日期查询测试''),\n        (''更新\"\"测试会议\"\"的时间为明天上午7点到8点'', ''事件更新测试''),\n        (''我七月前要完成期末复习'', ''任务创建测试''),\n        (''我已经完成了期末复习'', ''任务状态更新测试''),\n        (''我要开始学习画画了，请你为我安排一个规划'', ''智能规划测试''),\n    ]\n    \n    for query, test_name in tests:\n        print(f''=== {test_name} ==='')\n        print(f''Query: {query}'')\n        result = await agent.chat(query, session_id)\n        print(f''Response: {result[\"\"response\"\"]}'')\n        print(f''Success: {result.get(\"\"success\"\", False)}'')\n        print()\n\nasyncio.run(test_comprehensive())\n\")",
+      "Bash(PYTHONPATH=/Users/suyi/code/planday/src python3 -c \"\nimport asyncio\nfrom planday.main import PlanDayAgent\n\nasync def test_date_parsing():\n    agent = PlanDayAgent()\n    \n    print(''=== 测试日期解析：9月25日 ==='')\n    result = await agent.chat(''我9月25日的安排是什么'', ''date_test_session'')\n    print(f''Response: {result[\"\"response\"\"]}'')\n    print()\n\nasyncio.run(test_date_parsing())\n\")",
+      "Bash(PYTHONPATH=/Users/suyi/code/planday/src python3 -c \"\nimport asyncio\nfrom planday.main import PlanDayAgent\n\nasync def test_task_creation():\n    agent = PlanDayAgent()\n    \n    print(''=== 测试任务创建：简单任务 ==='')\n    result = await agent.chat(''我需要完成期末复习'', ''task_test_session'')\n    print(f''Response: {result[\"\"response\"\"]}'')\n    print()\n\nasyncio.run(test_task_creation())\n\")",
+      "Bash(PYTHONPATH=:*)",
+      "Bash(find:*)",
+      "WebFetch(domain:blog.futuresmart.ai)",
+      "Bash(npm run build:*)",
+      "Bash(mv:*)",
+      "Bash(uv sync:*)",
+      "Bash(uv run:*)",
+      "Bash(uv add:*)",
+      "Bash(chmod:*)",
+      "Bash(pkill:*)"
+    ],
+    "deny": []
+  }
+}
