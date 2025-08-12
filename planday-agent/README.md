@@ -96,7 +96,3 @@ uv run python -m src.main
 OPENAI_API_KEY=your_api_key
 OPENAI_BASE_URL=your_base_url  # 可选
 ```
-
-## 许可证
-
-MIT License
