@@ -34,7 +34,7 @@
 
 ### 4. 训练与评估
 
-训练过程使用 Weights & Biases 进行记录，后来被墙了所以改用swandlan(训练过程中遇到点bug，日志前500条被吞了), 可以实时监控损失、奖励和 KL 散度等指标。`trainlog.txt` 文件包含了训练运行的原始日志数据。
+训练过程使用 Weights & Biases 进行记录，后来被墙了所以改用swandlan(训练过程中遇到点bug，日志前700条被吞了), 可以实时监控损失、奖励和 KL 散度等指标。`trainlog.txt` 文件包含了训练运行的原始日志数据。
 
 ![WandB 报告](images/wandb.png)
 *(使用 Weights & Biases 监控的训练过程示例)*
@@ -70,4 +70,3 @@
 -   `evaluation/`: 用于评估模型性能的脚本和结果。
 -   `grpo_trainer_lora_model/adapter_config.json`: LoRA 配置文件。
 -   `images/`: 包含用于结果可视化的图像和图表。
--   `trainlog.txt`: 训练过程中的原始日志输出。

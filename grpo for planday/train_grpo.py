@@ -10,9 +10,6 @@ import swanlab
 from trl import GRPOConfig, GRPOTrainer
 
 
-# To run this script, you first need to install the dependencies.
-# You can do this by running the following command in your terminal:
-# pip install unsloth==2025.7.8 vllm wandb typing_extensions datasets huggingface_hub swanlab
 
 # Clean up previous runs
 os.system("rm -rf outputs completion_samples")
@@ -97,7 +94,6 @@ print("Sample from dataset:", ds[0])
 
 
 # --- Reward functions ---
-# We use 3 reward functions:
 # 1. Format reward: ensure the output is in the correct format. (10 points)
 # 2. Sorted events reward: ensure the events are sorted in chronological order. (20 points)
 # 3. Score reward: ratio between the total weighted duration of the events and the optimal score computed with dynamic programming. (70 points)
@@ -299,6 +295,3 @@ trainer = GRPOTrainer(
 trainer.train()
 
 print("Training finished.")
-
-# For more details on the training run, see the generated report:
-# [Weights & Biases report](https://wandb.ai/stefanofiorucci/GRPO-reboost/reports/Qwen-Scheduler-GRPO--VmlldzoxMjI1MTA4MA?accessToken=p9whiiwc1ourpt1ae5hcs84un0ri117ty84m3c56kogvkm5drp5hnk9tanvlvrsn) 
